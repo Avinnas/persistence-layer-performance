@@ -1,0 +1,86 @@
+<Configuration status="warn">
+    <Properties>
+        <Property name="basePath">./logs</Property>
+        <Property name="log-path">PropertiesConfiguration</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="Console-Appender" target="SYSTEM_OUT">
+            <PatternLayout>
+                <pattern>
+                    [%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+                </pattern>>
+            </PatternLayout>
+        </Console>
+
+
+
+        <RollingFile name="fileLogger"
+                     fileName="${basePath}/app.log"
+                     filePattern="${basePath}/app-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+                </pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <SizeBasedTriggeringPolicy size="10MB" />
+            </Policies>
+            <!-- Max 10 files will be created everyday -->
+            <DefaultRolloverStrategy max="10">
+                <Delete basePath="${basePath}" maxDepth="10">
+                    <!-- Delete all files older than 30 days -->
+                    <IfLastModified age="30d" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+        <RollingFile name="fileLogger2"
+                     fileName="${basePath}/stats/app.log"
+                     filePattern="${basePath}/app-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+                </pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <SizeBasedTriggeringPolicy size="10MB" />
+            </Policies>
+            <!-- Max 10 files will be created everyday -->
+            <DefaultRolloverStrategy max="10">
+                <Delete basePath="${basePath}" maxDepth="10">
+                    <!-- Delete all files older than 30 days -->
+                    <IfLastModified age="30d" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="info" additivity="false">
+            <appender-ref ref="fileLogger" />
+        </Root>
+        <Logger name="org.hibernate.SQL" level="debug" additivity="false">
+            <AppenderRef ref="fileLogger"/>
+        </Logger>
+        <Logger name="org.hibernate.type.descriptor.sql" level="trace" additivity="false">
+            <AppenderRef ref="fileLogger"/>
+        </Logger>
+        <Logger name="org.hibernate.engine.jdbc.batch.internal.BatchingBatch" level="DEBUG">
+            <AppenderRef ref="fileLogger"/>
+        </Logger>
+
+        <Logger name="org.hibernate.stat" level="DEBUG" additivity="false">
+            <AppenderRef ref="fileLogger2"/>
+        </Logger>
+        <Logger name="org.hibernate.SQL_SLOW" level="trace" additivity="false">
+            <AppenderRef ref="Console-Appender"/>
+        </Logger>
+
+        <logger name="org.hibernate.engine.internal.StatisticalLoggingSessionEventListener" level="info">
+            <AppenderRef ref="Console-Appender"/>
+        </logger>
+        <Logger name="org.hibernate.cache" level="trace" additivity="false">
+            <AppenderRef ref="Console-Appender"/>
+        </Logger>
+    </Loggers>
+
+</Configuration>

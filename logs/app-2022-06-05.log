@@ -1,0 +1,12 @@
+[DEBUG] 2022-06-05 21:29:01.004 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-05 21:39:36.240 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-05 21:41:08.520 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-05 21:43:16.578 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-05 21:47:10.514 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-05 21:48:26.687 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-05 21:51:53.695 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-05 22:04:50.051 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-05 22:36:50.418 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-05 22:36:53.447 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from images as generatedAlias0, time: 1292ms, rows: 500
+[DEBUG] 2022-06-05 22:37:25.737 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-05 22:37:28.698 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from images as generatedAlias0, time: 1147ms, rows: 500
