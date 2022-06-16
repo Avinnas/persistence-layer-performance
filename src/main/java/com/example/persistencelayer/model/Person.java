@@ -1,14 +1,16 @@
 package com.example.persistencelayer.model;
 
 import javax.persistence.*;
-
-@MappedSuperclass
+//
+//@MappedSuperclass
+@Entity(name = "persons")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="emp_sequence")
     @SequenceGenerator(name="emp_sequence", sequenceName = "emp_id_seq", allocationSize = 100)
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long PersonId;
+    private long personId;
     private String name;
     private String surname;
 
@@ -21,11 +23,11 @@ public abstract class Person {
     }
 
     public long getPersonId() {
-        return PersonId;
+        return personId;
     }
 
     public void setPersonId(long personId) {
-        PersonId = personId;
+        this.personId = personId;
     }
 
     public String getName() {

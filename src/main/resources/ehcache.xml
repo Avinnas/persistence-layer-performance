@@ -1,0 +1,6 @@
+<ehcache>
+    <defaultCache maxEntriesLocalHeap="1000" eternal="false" timeToIdleSeconds="300" timeToLiveSeconds="600">
+    </defaultCache>
+    <cache name="com.example.persistencelayer.model.Customer"
+           maxEntriesLocalHeap="1000" eternal="false" timeToIdleSeconds="300" timeToLiveSeconds="600"></cache>
+</ehcache>

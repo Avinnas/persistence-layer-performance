@@ -2,7 +2,6 @@ package com.example.persistencelayer;
 
 import com.example.persistencelayer.model.Customer;
 import com.example.persistencelayer.repository.CustomerRepository;
-import com.example.persistencelayer.service.CustomerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

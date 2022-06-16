@@ -1,14 +1,23 @@
 package com.example.persistencelayer.model;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity(name = "customers")
-public class Customer extends Person{
+@Cacheable
+@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "com.example.persistencelayer.model.Customer")
+public class Customer extends Person implements Serializable {
+
 
     @OneToMany(mappedBy = "customer")
+    @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     private List<Order> orders;
 
     public Customer() {

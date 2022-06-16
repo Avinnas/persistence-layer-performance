@@ -1,27 +1,39 @@
 package com.example.persistencelayer;
 
+import com.example.persistencelayer.model.Customer;
 import com.example.persistencelayer.model.Product;
+import com.example.persistencelayer.repository.CustomerRepository;
 import com.example.persistencelayer.repository.OrderRepository;
 import com.example.persistencelayer.repository.ProductRepository;
+import net.sf.ehcache.CacheManager;
+import org.hibernate.Session;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.cache.CacheManager;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest
 public class CacheTests {
 
+    @PersistenceContext
+    EntityManager entityManager;
+
     @Autowired
     ProductRepository productRepository;
 
     @Autowired
-    OrderRepository orderRepository;
+    CustomerRepository customerRepository;
 
     @Autowired
-    CacheManager cacheManager;
+    OrderRepository orderRepository;
+//
+//    @Autowired
+//    CacheManager cacheManager;
 
     private long getMemoryUse(){
         putOutTheGarbage();
@@ -75,7 +87,45 @@ public class CacheTests {
             sum += end-start;
         }
         System.out.println(sum/loopCount);
-        cacheManager.getCache("products").clear();
+//        cacheManager.getCache("products").clear();
     }
+
+    @Test
+    @Transactional
+    void firstLevelCache(){
+
+        long start = System.nanoTime();
+        Product product = productRepository.findById(100L).get();
+        long end = System.nanoTime();
+
+        System.out.println(end - start);
+
+        for (int i = 0; i < 10; i++) {
+            start = System.nanoTime();
+            Product product2 = productRepository.findById(100L).get();
+            end = System.nanoTime();
+            System.out.println(end - start);
+        }
+
+    }
+
+    @Test
+    void secondLevelEntityCache(){
+        long start = System.nanoTime();
+        Customer customer= customerRepository.findById(100L).get();
+        long end = System.nanoTime();
+        var a  = CacheManager.ALL_CACHE_MANAGERS.get(0).getCache("com.example.persistencelayer.model.Customer");
+
+        System.out.println(end - start);
+        System.out.println(a.getSize());
+
+        for (int i = 0; i < 10; i++) {
+            start = System.nanoTime();
+            Customer customer2 = customerRepository.findById(100L).get();
+            end = System.nanoTime();
+            System.out.println(end - start);
+        }
+    }
+
 
 }

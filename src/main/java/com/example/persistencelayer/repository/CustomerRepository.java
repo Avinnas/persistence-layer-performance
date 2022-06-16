@@ -2,6 +2,7 @@ package com.example.persistencelayer.repository;
 
 import com.example.persistencelayer.model.Customer;
 import com.example.persistencelayer.model.Employee;
+import com.example.persistencelayer.model.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -22,4 +23,5 @@ public interface CustomerRepository extends JpaRepository<Customer,Long> {
     @Modifying
     @Query("DELETE from customers where surname LIKE %:substring%")
     public void deleteBySurnameContainingUsingQuery(@Param("substring") String substring);
+
 }

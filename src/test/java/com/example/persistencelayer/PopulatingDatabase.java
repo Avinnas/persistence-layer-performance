@@ -2,13 +2,13 @@ package com.example.persistencelayer;
 
 import com.example.persistencelayer.model.*;
 import com.example.persistencelayer.repository.*;
-import com.example.persistencelayer.service.CustomerService;
 import com.github.javafaker.Faker;
-import com.mysql.cj.jdbc.Blob;
-import org.ietf.jgss.Oid;
+import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import javax.sql.rowset.serial.SerialBlob;
 import java.math.BigDecimal;
@@ -25,6 +25,8 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 @SpringBootTest
+//@ActiveProfiles("table_per_class")
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class PopulatingDatabase {
 
     @Autowired
@@ -38,15 +40,33 @@ class PopulatingDatabase {
     @Autowired
     ImageRepository imageRepository;
 
+    @Test
+    @org.junit.jupiter.api.Order(1)
+    void populateCustomers() {
+        long sum = 0;
+        List<Customer> customers = new ArrayList<>();
+
+        long start = System.currentTimeMillis();
+        for (int j = 0; j < 1000; j++) {
+            customers.add(new Customer("TESTNAME", "surname" + j, new ArrayList<>()));
+        }
+        customerRepository.saveAll(customers);
+        long end = System.currentTimeMillis();
+
+        sum += end - start;
+        System.out.println(sum);
+
+    }
 
     @Test
-    void populateEmployeeTable(){
+    @org.junit.jupiter.api.Order(2)
+    void populateEmployeeTable() {
         Faker faker = new Faker();
 
         List<Employee> employees = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             double random = ThreadLocalRandom.current().nextDouble(3000, 7000);
-            Employee employee = new Employee(faker.name().firstName(),faker.name().lastName(), BigDecimal.valueOf(random), null);
+            Employee employee = new Employee(faker.name().firstName(), faker.name().lastName(), BigDecimal.valueOf(random), null);
             employees.add(employee);
         }
         employeeRepository.saveAll(employees);
@@ -54,27 +74,28 @@ class PopulatingDatabase {
     }
 
     @Test
-    void populateImageTable(){
+    @org.junit.jupiter.api.Order(3)
+    void populateImageTable() {
         byte[] bytes;
         List<Image> images = new ArrayList<>();
-        try{
+        try {
             for (int i = 0; i < 500; i++) {
-                int size = ThreadLocalRandom.current().nextInt(30000,200000);
+                int size = ThreadLocalRandom.current().nextInt(30000, 200000);
                 bytes = new byte[size];
                 SecureRandom.getInstanceStrong().nextBytes(bytes);
                 images.add(new Image(new SerialBlob(bytes)));
             }
             imageRepository.saveAll(images);
 
-        }
-        catch (NoSuchAlgorithmException | SQLException e){
+        } catch (NoSuchAlgorithmException | SQLException e) {
             System.out.println(e.getMessage());
         }
 
     }
 
     @Test
-    void populateProductTable(){
+    @org.junit.jupiter.api.Order(4)
+    void populateProductTable() {
         List<Image> images = imageRepository.findAll();
         Random random = new Random();
 
@@ -86,7 +107,7 @@ class PopulatingDatabase {
                     .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
                     .toString();
             int category = random.nextInt(5);
-            int imageId = category*100 + random.nextInt(100);
+            int imageId = category * 100 + random.nextInt(100);
             products.add(new Product(generatedString, random.nextInt(20),
                     images.get(imageId), ProductCategory.values()[category], null));
         }
@@ -94,7 +115,8 @@ class PopulatingDatabase {
     }
 
     @Test
-    void populateOrderTable(){
+    @org.junit.jupiter.api.Order(5)
+    void populateOrderTable() {
         List<Product> products = productRepository.findAll();
         List<Employee> employees = employeeRepository.findAll();
         List<Customer> customers = customerRepository.findAll();
@@ -108,7 +130,7 @@ class PopulatingDatabase {
             long deliveryDuration = ThreadLocalRandom.current().nextInt(24, 96);
             long deliveryDate = Instant.ofEpochSecond(creationDate).plus(Duration.ofHours(deliveryDuration)).getEpochSecond();
 
-            int productQuantity = ThreadLocalRandom.current().nextInt(1,11);
+            int productQuantity = ThreadLocalRandom.current().nextInt(1, 11);
             List<Product> tempProducts = new ArrayList<>();
             for (int j = 0; j < productQuantity; j++) {
                 int productIndex = ThreadLocalRandom.current().nextInt(products.size());
