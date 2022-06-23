@@ -1,0 +1,115 @@
+[DEBUG] 2022-06-17 12:25:48.290 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-17 12:28:04.112 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-17 12:28:07.292 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 313ms, rows: 111
+[DEBUG] 2022-06-17 12:28:07.640 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 112ms, rows: 111
+[DEBUG] 2022-06-17 12:28:07.910 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 92ms, rows: 111
+[DEBUG] 2022-06-17 12:28:08.197 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 132ms, rows: 111
+[DEBUG] 2022-06-17 12:28:08.739 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 133ms, rows: 111
+[DEBUG] 2022-06-17 12:28:09.057 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 66ms, rows: 111
+[DEBUG] 2022-06-17 12:28:09.296 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 37ms, rows: 111
+[DEBUG] 2022-06-17 12:28:09.580 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 65ms, rows: 111
+[DEBUG] 2022-06-17 12:28:09.880 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 57ms, rows: 111
+[DEBUG] 2022-06-17 12:29:12.791 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-17 12:29:15.857 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 258ms, rows: 111
+[DEBUG] 2022-06-17 12:29:16.364 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 271ms, rows: 111
+[DEBUG] 2022-06-17 12:29:16.560 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 71ms, rows: 111
+[DEBUG] 2022-06-17 12:29:16.709 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 44ms, rows: 111
+[DEBUG] 2022-06-17 12:29:16.857 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 53ms, rows: 111
+[DEBUG] 2022-06-17 12:29:16.991 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 45ms, rows: 111
+[DEBUG] 2022-06-17 12:29:17.123 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 29ms, rows: 111
+[DEBUG] 2022-06-17 12:29:17.258 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 30ms, rows: 111
+[DEBUG] 2022-06-17 12:29:17.373 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 27ms, rows: 111
+[DEBUG] 2022-06-17 12:30:42.634 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-17 12:30:45.219 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 328ms, rows: 111
+[DEBUG] 2022-06-17 12:30:57.530 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 71ms, rows: 111
+[DEBUG] 2022-06-17 12:31:06.377 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 14ms, rows: 111
+[DEBUG] 2022-06-17 12:31:11.850 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 13ms, rows: 111
+[DEBUG] 2022-06-17 12:31:16.805 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 17ms, rows: 111
+[DEBUG] 2022-06-17 12:31:22.094 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 16ms, rows: 111
+[DEBUG] 2022-06-17 12:31:27.392 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 12ms, rows: 111
+[DEBUG] 2022-06-17 12:31:32.157 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 12ms, rows: 111
+[DEBUG] 2022-06-17 12:33:57.535 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-17 12:34:00.405 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 129ms, rows: 11
+[DEBUG] 2022-06-17 12:34:02.424 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 17ms, rows: 11
+[DEBUG] 2022-06-17 12:34:03.836 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 17ms, rows: 11
+[DEBUG] 2022-06-17 12:34:04.712 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 7ms, rows: 11
+[DEBUG] 2022-06-17 12:34:05.567 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 11ms, rows: 11
+[DEBUG] 2022-06-17 12:34:06.461 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 10ms, rows: 11
+[DEBUG] 2022-06-17 12:34:08.306 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 9ms, rows: 11
+[DEBUG] 2022-06-17 12:34:09.168 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 25ms, rows: 11
+[DEBUG] 2022-06-17 12:34:09.795 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 9ms, rows: 11
+[DEBUG] 2022-06-17 12:34:40.148 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-17 12:34:42.184 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 154ms, rows: 11
+[DEBUG] 2022-06-17 12:34:43.512 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 12ms, rows: 11
+[DEBUG] 2022-06-17 12:34:44.586 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 11ms, rows: 11
+[DEBUG] 2022-06-17 12:34:45.365 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 6ms, rows: 11
+[DEBUG] 2022-06-17 12:34:45.966 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 4ms, rows: 11
+[DEBUG] 2022-06-17 12:34:46.535 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 7ms, rows: 11
+[DEBUG] 2022-06-17 12:34:47.257 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 8ms, rows: 11
+[DEBUG] 2022-06-17 12:34:47.904 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 6ms, rows: 11
+[DEBUG] 2022-06-17 12:34:48.766 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 5ms, rows: 11
+[DEBUG] 2022-06-17 12:34:49.443 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 8ms, rows: 11
+[DEBUG] 2022-06-17 12:34:50.367 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 4ms, rows: 11
+[DEBUG] 2022-06-17 12:34:51.150 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 6ms, rows: 11
+[DEBUG] 2022-06-17 12:34:51.702 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 5ms, rows: 11
+[DEBUG] 2022-06-17 12:34:52.232 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 4ms, rows: 11
+[DEBUG] 2022-06-17 12:34:52.620 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 5ms, rows: 11
+[DEBUG] 2022-06-17 12:34:53.062 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 7ms, rows: 11
+[DEBUG] 2022-06-17 12:34:53.633 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 4ms, rows: 11
+[DEBUG] 2022-06-17 12:34:54.066 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 4ms, rows: 11
+[DEBUG] 2022-06-17 12:34:54.456 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 7ms, rows: 11
+[DEBUG] 2022-06-17 12:34:55.237 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 6ms, rows: 11
+[DEBUG] 2022-06-17 12:34:55.942 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 8ms, rows: 11
+[DEBUG] 2022-06-17 12:34:56.507 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 3ms, rows: 11
+[DEBUG] 2022-06-17 12:34:56.894 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 3ms, rows: 11
+[DEBUG] 2022-06-17 12:34:57.261 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 3ms, rows: 11
+[DEBUG] 2022-06-17 12:34:57.710 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 3ms, rows: 11
+[DEBUG] 2022-06-17 12:34:58.235 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 8ms, rows: 11
+[DEBUG] 2022-06-17 12:34:58.704 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 5ms, rows: 11
+[DEBUG] 2022-06-17 12:34:59.114 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 6ms, rows: 11
+[DEBUG] 2022-06-17 12:34:59.785 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 8ms, rows: 11
+[DEBUG] 2022-06-17 12:35:00.491 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 4ms, rows: 11
+[DEBUG] 2022-06-17 12:35:01.045 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 3ms, rows: 11
+[DEBUG] 2022-06-17 12:35:01.838 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 12ms, rows: 11
+[DEBUG] 2022-06-17 12:35:02.439 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 9ms, rows: 11
+[DEBUG] 2022-06-17 12:35:02.991 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 4ms, rows: 11
+[DEBUG] 2022-06-17 12:35:03.655 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 5ms, rows: 11
+[DEBUG] 2022-06-17 12:35:04.333 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 7ms, rows: 11
+[DEBUG] 2022-06-17 12:35:05.035 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 10ms, rows: 11
+[DEBUG] 2022-06-17 12:35:35.725 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-17 12:35:37.945 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 202ms, rows: 111
+[DEBUG] 2022-06-17 12:36:26.352 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-17 12:36:29.263 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 316ms, rows: 111
+[DEBUG] 2022-06-17 12:37:24.832 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-17 12:37:27.714 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from customers as generatedAlias0 where generatedAlias0.surname like :param0 escape :param1, time: 213ms, rows: 11
+[DEBUG] 2022-06-17 12:41:53.956 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-17 12:41:57.435 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 1461ms, rows: 3971
+[DEBUG] 2022-06-17 12:42:21.809 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 846ms, rows: 3971
+[DEBUG] 2022-06-17 12:42:43.194 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 697ms, rows: 3971
+[DEBUG] 2022-06-17 12:42:56.425 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 478ms, rows: 3971
+[DEBUG] 2022-06-17 12:43:06.546 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 402ms, rows: 3971
+[DEBUG] 2022-06-17 12:44:10.942 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-17 12:44:13.849 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 714ms, rows: 320
+[DEBUG] 2022-06-17 12:44:16.843 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 171ms, rows: 320
+[DEBUG] 2022-06-17 12:44:19.620 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 138ms, rows: 320
+[DEBUG] 2022-06-17 12:44:21.436 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 91ms, rows: 320
+[DEBUG] 2022-06-17 12:44:22.589 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 56ms, rows: 320
+[DEBUG] 2022-06-17 12:44:23.620 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 64ms, rows: 320
+[DEBUG] 2022-06-17 12:44:24.779 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 116ms, rows: 320
+[DEBUG] 2022-06-17 12:44:25.764 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 77ms, rows: 320
+[DEBUG] 2022-06-17 12:44:26.662 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 65ms, rows: 320
+[DEBUG] 2022-06-17 12:46:48.604 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-17 12:46:51.818 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 833ms, rows: 1126
+[DEBUG] 2022-06-17 12:47:00.285 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 319ms, rows: 1126
+[DEBUG] 2022-06-17 12:47:06.897 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 286ms, rows: 1126
+[DEBUG] 2022-06-17 12:47:38.874 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-17 12:48:07.167 [main] StatisticsInitiator - Statistics initialized [enabled=true]
+[DEBUG] 2022-06-17 12:48:10.295 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 882ms, rows: 540
+[DEBUG] 2022-06-17 12:48:14.762 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 400ms, rows: 540
+[DEBUG] 2022-06-17 12:48:19.847 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 154ms, rows: 540
+[DEBUG] 2022-06-17 12:48:21.963 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 86ms, rows: 540
+[DEBUG] 2022-06-17 12:48:23.443 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 201ms, rows: 540
+[DEBUG] 2022-06-17 12:48:24.868 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 105ms, rows: 540
+[DEBUG] 2022-06-17 12:48:25.873 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 98ms, rows: 540
+[DEBUG] 2022-06-17 12:48:26.845 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 78ms, rows: 540
+[DEBUG] 2022-06-17 12:48:27.737 [main] StatisticsImpl - HHH000117: HQL: select generatedAlias0 from orders as generatedAlias0 where generatedAlias0.creationDate<:param0, time: 77ms, rows: 540

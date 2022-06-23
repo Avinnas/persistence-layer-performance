@@ -35,29 +35,7 @@ public class CacheTests {
 //    @Autowired
 //    CacheManager cacheManager;
 
-    private long getMemoryUse(){
-        putOutTheGarbage();
-        long totalMemory = Runtime.getRuntime().totalMemory();
-        putOutTheGarbage();
-        long freeMemory = Runtime.getRuntime().freeMemory();
-        return (totalMemory - freeMemory);
-    }
 
-    private void collectGarbage(){
-        try{
-            System.gc();
-            Thread.currentThread().sleep(100);
-            System.runFinalization();
-            Thread.currentThread().sleep(100);
-        }
-        catch (InterruptedException e){
-            e.printStackTrace();
-        }
-    }
-    private void putOutTheGarbage() {
-        collectGarbage();
-        collectGarbage();
-    }
 
     @Test
     public void loadProducts() {
@@ -67,11 +45,11 @@ public class CacheTests {
         long start, end, memory1=1, memory2=1;
 
 
-        memory1 = getMemoryUse();
+        memory1 = MemoryUtils.getMemoryUse();
         start = System.nanoTime();
         List<Product> products= productRepository.findAllWithCaching();
         end = System.nanoTime();
-        memory2 = getMemoryUse();
+        memory2 = MemoryUtils.getMemoryUse();
 
 
         System.out.println(memory2-memory1 + " B");

@@ -2,13 +2,17 @@ package com.example.persistencelayer.model;
 
 import javax.persistence.*;
 //
-//@MappedSuperclass
-@Entity(name = "persons")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@MappedSuperclass
+//@Entity(name = "persons")
+//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Person {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="emp_sequence")
-    @SequenceGenerator(name="emp_sequence", sequenceName = "emp_id_seq", allocationSize = 100)
+    @SequenceGenerator(name="emp_sequence", sequenceName = "emp_id_seq", allocationSize = 1000)
+
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long personId;
     private String name;

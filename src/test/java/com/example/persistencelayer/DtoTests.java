@@ -23,7 +23,7 @@ public class DtoTests {
     }
     @Test
     void orders(){
-        List<Order> orders = orderRepository.findAllByCreationDateLessThan(
+        List<Order> orders = orderRepository.findAllByCreationDateBefore(
                 LocalDateTime.of(2022, 1, 1, 0, 0));
     }
 }

@@ -9,13 +9,13 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 
-@SpringBootTest
-public class TestUtils {
-
-    @Transactional
-    @Rollback
-    public void updateTransaction(List<Customer> customerList, CustomerRepository customerRepository){
-        customerRepository.saveAll(customerList);
-        customerRepository.flush();
-    }
-}
+//@SpringBootTest
+//public class TestUtils {
+//
+//    @Transactional
+//    @Rollback
+//    public void updateTransaction(List<Customer> customerList, CustomerRepository customerRepository){
+//        customerRepository.saveAll(customerList);
+//        customerRepository.flush();
+//    }
+//}

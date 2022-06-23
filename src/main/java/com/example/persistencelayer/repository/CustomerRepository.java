@@ -20,6 +20,9 @@ public interface CustomerRepository extends JpaRepository<Customer,Long> {
     public List<Customer> findBySurname(String surname);
     public void deleteBySurnameContaining(String substring);
 
+    @Query(nativeQuery = true, value = "SELECT * from customers LIMIT :limit")
+    List<Customer> findMultipleTop(@Param("limit") long limit);
+
     @Modifying
     @Query("DELETE from customers where surname LIKE %:substring%")
     public void deleteBySurnameContainingUsingQuery(@Param("substring") String substring);

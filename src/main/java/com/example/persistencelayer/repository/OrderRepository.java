@@ -36,5 +36,10 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
     @Query("select new com.example.persistencelayer.model.OrderDto(o.creationDate, o.deliveryDate) from orders o where o.creationDate<'2022-01-01 00:00:00' " )
     public List<OrderDto> findAllOrderDtoByCreationDateLessThan(LocalDateTime creationDate);
 
-    List<Order> findAllByCreationDateLessThan(LocalDateTime creationDate);
+    List<Order> findAllByCreationDateBefore(LocalDateTime creationDate);
+
+    @Query(nativeQuery = true, value = "SELECT * from orders LIMIT :limit")
+    List<Order> findMultipleTop(@Param("limit") int limit);
+
+    void deleteByCreationDateBefore(LocalDateTime localDateTime);
 }

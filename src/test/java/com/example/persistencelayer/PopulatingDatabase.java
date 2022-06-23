@@ -47,7 +47,7 @@ class PopulatingDatabase {
         List<Customer> customers = new ArrayList<>();
 
         long start = System.currentTimeMillis();
-        for (int j = 0; j < 1000; j++) {
+        for (int j = 0; j < 100000; j++) {
             customers.add(new Customer("TESTNAME", "surname" + j, new ArrayList<>()));
         }
         customerRepository.saveAll(customers);
@@ -64,7 +64,7 @@ class PopulatingDatabase {
         Faker faker = new Faker();
 
         List<Employee> employees = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10000; i++) {
             double random = ThreadLocalRandom.current().nextDouble(3000, 7000);
             Employee employee = new Employee(faker.name().firstName(), faker.name().lastName(), BigDecimal.valueOf(random), null);
             employees.add(employee);
@@ -79,7 +79,7 @@ class PopulatingDatabase {
         byte[] bytes;
         List<Image> images = new ArrayList<>();
         try {
-            for (int i = 0; i < 500; i++) {
+            for (int i = 0; i < 5000; i++) {
                 int size = ThreadLocalRandom.current().nextInt(30000, 200000);
                 bytes = new byte[size];
                 SecureRandom.getInstanceStrong().nextBytes(bytes);
@@ -101,7 +101,7 @@ class PopulatingDatabase {
 
         List<Product> products = new ArrayList<>();
 
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 100000; i++) {
             String generatedString = random.ints(97, 122)
                     .limit(10)
                     .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
@@ -125,7 +125,7 @@ class PopulatingDatabase {
         Instant fourYearsAgo = Instant.now().minus(Duration.ofDays(4 * 365));
         Instant tenDaysAgo = Instant.now().minus(Duration.ofDays(10));
 
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 100000; i++) {
             long creationDate = ThreadLocalRandom.current().nextLong(fourYearsAgo.getEpochSecond(), tenDaysAgo.getEpochSecond());
             long deliveryDuration = ThreadLocalRandom.current().nextInt(24, 96);
             long deliveryDate = Instant.ofEpochSecond(creationDate).plus(Duration.ofHours(deliveryDuration)).getEpochSecond();

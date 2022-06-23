@@ -41,8 +41,8 @@ public class BatchingUpdateTests {
         while (!lists[1].isEmpty()) {
 
             long start = System.currentTimeMillis();
-            TestUtils t = new TestUtils();
-            t.updateTransaction(lists[0], customerRepository);
+            customerRepository.saveAll(lists[0]);
+            customerRepository.flush();
 
             long end = System.currentTimeMillis();
             sum += end - start;
@@ -56,20 +56,20 @@ public class BatchingUpdateTests {
     }
 
     @ParameterizedTest
-    @ValueSource(ints = {1, 5, 10, 20, 30, 50, 60, 80, 100})
+    @ValueSource(ints = {1, 5, 10, 20, 30, 50, 60, 80, 100, 120})
     @Transactional
     void singleSessionUpdate(int batchSize) {
         long sum = 0;
 
         entityManager.unwrap(Session.class).setJdbcBatchSize(batchSize);
 
-        List<Customer> customerList = customerRepository.findBySurnameContaining("surname5");
+        List<Customer> customerList = customerRepository.findMultipleTop(1000);
         customerList.forEach(x -> x.setSurname("TESTSURNAME"));
 
 
         long start = System.currentTimeMillis();
-        TestUtils t = new TestUtils();
-        t.updateTransaction(customerList, customerRepository);
+        customerRepository.saveAll(customerList);
+        customerRepository.flush();
 
         long end = System.currentTimeMillis();
         System.out.println(batchSize + ": " + (end - start));
