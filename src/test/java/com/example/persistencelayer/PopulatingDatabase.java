@@ -25,7 +25,7 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 @SpringBootTest
-//@ActiveProfiles("table_per_class")
+@ActiveProfiles("table_per_class")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class PopulatingDatabase {
 

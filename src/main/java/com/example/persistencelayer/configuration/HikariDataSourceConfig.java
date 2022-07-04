@@ -14,7 +14,9 @@ public class HikariDataSourceConfig {
         config.setJdbcUrl( "jdbc:mysql://localhost:3306/pool_test" );
         config.setUsername( "root" );
         config.setPassword( "password" );
-        config.addDataSourceProperty( "maximumPoolSize" , "100" );
+        config.addDataSourceProperty( "maximumPoolSize" , "10" );
+        config.addDataSourceProperty("minimumIdle", "0");
+        config.addDataSourceProperty("maxLifetime", "3000");
         ds = new HikariDataSource( config );
     }
 

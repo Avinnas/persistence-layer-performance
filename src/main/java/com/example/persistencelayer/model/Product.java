@@ -1,12 +1,16 @@
 package com.example.persistencelayer.model;
 
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Blob;
 import java.util.List;
 
 @Entity(name = "products")
-public class Product {
+@Cacheable
+@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE )
+public class Product{
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="prod_sequence")
@@ -22,6 +26,7 @@ public class Product {
     private ProductCategory productCategory;
 
     @ManyToMany(mappedBy = "products")
+    @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE )
     private List<Order> orders;
 
     public Product() {

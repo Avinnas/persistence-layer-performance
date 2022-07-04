@@ -22,7 +22,7 @@ public class ConnectionPoolingTests {
         long start= 0, end=0;
         long memory1 = MemoryUtils.getMemoryUse();
         List<Connection> connections = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             try{
                 start = System.nanoTime();
                 Connection connection = HikariDataSourceConfig.getConnection();
@@ -45,5 +45,12 @@ public class ConnectionPoolingTests {
                 throwables.printStackTrace();
             }
         });
+
+        try{
+            Thread.sleep(30000);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 }

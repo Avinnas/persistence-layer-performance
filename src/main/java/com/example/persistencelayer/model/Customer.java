@@ -13,14 +13,14 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity(name = "customers")
-//@Cacheable
-//@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "com.example.persistencelayer.model.Customer")
+@Cacheable
+@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Customer extends Person implements Serializable {
 
 
-    @OneToMany(mappedBy = "customer", orphanRemoval = true)
-    @Cascade(CascadeType.DELETE)
-//    @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    @OneToMany(mappedBy = "customer")
+//    @Cascade(CascadeType.DELETE)
+    @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     private List<Order> orders;
 
     public Customer() {

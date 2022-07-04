@@ -6,10 +6,13 @@ import com.example.persistencelayer.model.Person;
 import com.example.persistencelayer.repository.CustomerRepository;
 import com.example.persistencelayer.repository.EmployeeRepository;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.CustomAutowireConfigurer;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Profile;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.ActiveProfiles;
 
 import javax.transaction.Transactional;
@@ -17,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest
-@ActiveProfiles("single_table")
+@ActiveProfiles("table_per_class")
 public class InheritanceTest {
 
     @Autowired
@@ -26,21 +29,31 @@ public class InheritanceTest {
     @Autowired
     EmployeeRepository employeeRepository;
 
-    @Test
+    @ParameterizedTest
+    @ValueSource(ints = {50, 100, 500, 1000})
     @Transactional
-    void insert(){
+    void insert(int customersCount){
         List<Customer> customers = new ArrayList<>();
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < customersCount; i++) {
             customers.add(new Customer("name", "surname", new ArrayList<>()));
         }
+        long start = System.currentTimeMillis();
         customerRepository.saveAll(customers);
         customerRepository.flush();
+        long end = System.currentTimeMillis();
+        System.out.println(end - start);
     }
 
-    @Test
+    @ParameterizedTest
+    @ValueSource(ints = {50, 100, 500, 1000})
     @Transactional
-    void getAllPersons(){
-        List<Customer> customers = customerRepository.findAll();
-        List<Employee> employees = employeeRepository.findAll();
+    void getPersons(int personsCount){
+        long start = System.currentTimeMillis();
+        List<Customer> customers = customerRepository.findAll(PageRequest.of(0,personsCount)).getContent();
+        List<Employee> employees = employeeRepository.findAll(PageRequest.of(0,personsCount)).getContent();
+        long end = System.currentTimeMillis();
+
+        System.out.println(end - start);
+
     }
 }
