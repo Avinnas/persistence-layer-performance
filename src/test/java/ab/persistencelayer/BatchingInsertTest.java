@@ -50,8 +50,7 @@ public class BatchingInsertTest {
     }
 
     @ParameterizedTest
-//    @ValueSource(ints = {1, 5, 10, 20, 30, 50, 60, 80, 100, 120})
-    @ValueSource(ints = {10})
+    @ValueSource(ints = {1, 5, 10, 20, 30, 50, 60, 80, 100, 120})
     void identityGeneration(int batchSize){
 
         int ENTITY_COUNT = 3;

@@ -16,7 +16,6 @@ public class ConnectionPoolingTests {
     @Test
     void getConnection(){
         long start= 0, end=0;
-        long memory1 = MemoryUtils.getMemoryUse();
         List<Connection> connections = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             try{
@@ -31,8 +30,6 @@ public class ConnectionPoolingTests {
             System.out.println((end-start));
 
         }
-        long memory2 = MemoryUtils.getMemoryUse();
-        System.out.println(memory2-memory1);
 
         connections.forEach(connection -> {
             try {
@@ -55,12 +52,6 @@ public class ConnectionPoolingTests {
             System.out.println((end-start));
 
         }
-
-//        try{
-//            Thread.sleep(30000);
-//        }catch (Exception e){
-//            e.printStackTrace();
-//        }
 
     }
 }

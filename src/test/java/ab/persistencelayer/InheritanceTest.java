@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest
-@ActiveProfiles("single_table")
+@ActiveProfiles("table_per_class")
 public class InheritanceTest {
 
     @Autowired
