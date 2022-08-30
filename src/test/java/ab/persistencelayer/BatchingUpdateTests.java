@@ -24,35 +24,35 @@ public class BatchingUpdateTests {
     @Autowired
     CustomerRepository customerRepository;
 
-    @ParameterizedTest
-    @ValueSource(ints = {1, 5, 10, 20, 30, 50, 60, 80, 100})
-    @Transactional
-    void separateSessionsUpdate(int batchSize) {
-        long sum = 0;
-
-        entityManager.unwrap(Session.class).setJdbcBatchSize(batchSize);
-
-        List<Customer> customerList = customerRepository.findBySurnameContaining("surname5");
-        customerList.forEach(x -> x.setSurname("TESTSURNAME"));
-        List[] lists = split(customerList, batchSize);
-
-
-        while (!lists[1].isEmpty()) {
-
-            long start = System.currentTimeMillis();
-            customerRepository.saveAll(lists[0]);
-            customerRepository.flush();
-
-            long end = System.currentTimeMillis();
-            sum += end - start;
-            customerList = lists[1];
-
-
-            lists = split(customerList, batchSize);
-        }
-        System.out.println(batchSize + ": " + sum);
-
-    }
+//    @ParameterizedTest
+//    @ValueSource(ints = {1, 5, 10, 20, 30, 50, 60, 80, 100})
+//    @Transactional
+//    void separateSessionsUpdate(int batchSize) {
+//        long sum = 0;
+//
+//        entityManager.unwrap(Session.class).setJdbcBatchSize(batchSize);
+//
+//        List<Customer> customerList = customerRepository.findBySurnameContaining("surname5");
+//        customerList.forEach(x -> x.setSurname("TESTSURNAME"));
+//        List[] lists = split(customerList, batchSize);
+//
+//
+//        while (!lists[1].isEmpty()) {
+//
+//            long start = System.currentTimeMillis();
+//            customerRepository.saveAll(lists[0]);
+//            customerRepository.flush();
+//
+//            long end = System.currentTimeMillis();
+//            sum += end - start;
+//            customerList = lists[1];
+//
+//
+//            lists = split(customerList, batchSize);
+//        }
+//        System.out.println(batchSize + ": " + sum);
+//
+//    }
 
     @ParameterizedTest
     @ValueSource(ints = {1, 5, 10, 20, 30, 50, 60, 80, 100, 120})

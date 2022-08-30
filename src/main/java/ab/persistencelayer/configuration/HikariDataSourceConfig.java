@@ -11,7 +11,7 @@ public class HikariDataSourceConfig {
     private static HikariDataSource ds;
 
     static {
-        config.setJdbcUrl( "jdbc:mysql://localhost:3306/pool_test" );
+        config.setJdbcUrl( "jdbc:mysql://localhost:3306/mysql_db" );
         config.setUsername( "root" );
         config.setPassword( "password" );
         config.addDataSourceProperty( "maximumPoolSize" , "10" );

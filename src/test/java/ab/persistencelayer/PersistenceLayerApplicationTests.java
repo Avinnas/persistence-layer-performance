@@ -12,21 +12,5 @@ import java.util.List;
 
 @SpringBootTest
 class PersistenceLayerApplicationTests {
-	@Autowired
-    CustomerRepository customerRepository;
-
-	@Test
-	@Transactional
-	void deleteByCondition() {
-		customerRepository.deleteBySurnameContaining("surname1");
-	}
-
-	@Test
-	@Transactional
-	void LoadAndDeleteByCondition() {
-		List<Customer> customers = customerRepository.findBySurnameContaining("surname1");
-		customerRepository.deleteAll(customers);
-		customerRepository.flush();
-	}
 
 }

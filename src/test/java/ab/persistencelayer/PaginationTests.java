@@ -34,7 +34,6 @@ public class PaginationTests {
         long start = System.currentTimeMillis();
         Page<Order> page = orderRepository.findAll(firstPage);
         long end = System.currentTimeMillis();
-        List<Order> orders = page.getContent();
 
         System.out.println(end-start);
 
@@ -55,8 +54,4 @@ public class PaginationTests {
         System.out.println(end-start);
     }
 
-    @Test
-    public void findAll(){
-        List<Order> orderList = orderRepository.findAll();
-    }
 }
