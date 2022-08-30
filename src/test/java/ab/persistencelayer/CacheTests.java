@@ -8,6 +8,7 @@ import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -44,9 +45,9 @@ public class CacheTests {
 //    @Autowired
 //    CacheManager cacheManager;
 
-    @AfterClass
+    @Before
     public void shutdownCacheManager(){
-        CacheManager.ALL_CACHE_MANAGERS.get(0).shutdown();
+        CacheManager.create();
     }
 
     @ParameterizedTest
