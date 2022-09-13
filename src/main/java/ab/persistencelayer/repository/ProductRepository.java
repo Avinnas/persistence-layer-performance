@@ -13,10 +13,6 @@ import java.util.Optional;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
-//    @Query("SELECT p from products p")
-//    @Cacheable("products")
-//    List<Product> findAllWithCaching();
-
 
     @Query(nativeQuery = true, value = "SELECT * from products LIMIT :limit")
     List<Product> findMultipleTop(@Param("limit") long limit);

@@ -15,7 +15,6 @@ public class Customer extends Person implements Serializable {
 
 
     @OneToMany(mappedBy = "customer")
-//    @Cascade(CascadeType.DELETE)
     @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     private List<Order> orders;
 
